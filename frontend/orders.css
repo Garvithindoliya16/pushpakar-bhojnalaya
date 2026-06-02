@@ -1,0 +1,437 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: #F7F8FD;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.admin-sidebar{
+
+    width: 320px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #020817,
+            #081225
+        );
+
+    padding: 35px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    bottom: 0;
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+    box-shadow:
+        8px 0 30px rgba(0,0,0,0.2);
+}
+
+
+
+/* LOGO */
+
+.sidebar-logo{
+
+    text-align: center;
+}
+
+.sidebar-logo img{
+
+    width: 150px;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.35);
+}
+
+.sidebar-logo h2{
+
+    color: white;
+
+    font-size: 24px;
+
+    line-height: 1.5;
+
+    margin-bottom: 40px;
+}
+
+
+
+/* MENU */
+
+.sidebar-menu{
+
+    list-style: none;
+}
+.sidebar-menu li a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.sidebar-menu li{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    color: #ddd;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+
+    cursor: pointer;
+
+    transition: 0.35s;
+}
+
+.sidebar-menu li:hover{
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(254,161,22,0.3),
+            rgba(254,161,22,0.08)
+        );
+
+    color: #FEA116;
+
+    transform: translateX(6px);
+}
+
+
+
+/* ACTIVE MENU */
+
+.active-sidebar{
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(254,161,22,0.35),
+            rgba(254,161,22,0.08)
+        );
+
+    color: #FEA116 !important;
+}
+
+#refreshBTN{
+    
+    width: 12%;
+
+    padding: 8px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2e6af7,
+            #00ccff
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.35s;
+
+    margin-top: auto;
+
+    margin-bottom: 25px;
+}
+
+
+/* LOGOUT BUTTON */
+
+.admin-logout-btn{
+
+    width: 100%;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff8c00,
+            #ff4500
+        );
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.35s;
+
+    margin-top: auto;
+
+    margin-bottom: 25px;
+}
+
+.admin-logout-btn:hover{
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(255,140,0,0.3);
+}
+
+
+
+/* PROFILE */
+
+.admin-profile{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: rgba(255,255,255,0.06);
+
+    padding: 15px;
+
+    border-radius: 20px;
+}
+
+.admin-profile img{
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.admin-profile h3{
+
+    color: white;
+
+    margin-bottom: 5px;
+}
+
+.admin-profile p{
+
+    color: #ccc;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.admin-profile span{
+
+    color: #32cd32;
+
+    font-size: 14px;
+}
+
+
+
+.order-card{
+
+    background:white;
+    border-radius:20px;
+
+    padding:30px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+
+    border-left:6px solid #FEA116;
+
+    transition:0.3s;
+}
+
+
+
+.order-card:hover{
+
+    transform:translateY(-4px);
+}
+
+
+
+.order-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+
+
+.order-header h2{
+
+    color:#0F172B;
+
+    font-size:28px;
+}
+
+
+
+.order-total{
+
+    color:#FEA116;
+
+    font-size:28px;
+
+    font-weight:bold;
+}
+
+
+
+.order-info{
+
+    margin-bottom:20px;
+}
+
+
+
+.order-info p{
+
+    margin:8px 0;
+
+    color:#666;
+}
+
+
+
+.items-list{
+
+    margin-top:15px;
+
+    padding-left:20px;
+}
+
+h3{
+    color: rgb(3, 3, 71);
+}
+
+.items-list li{
+    color:black;
+    margin-bottom:8px;
+}
+
+
+.admin-layout{
+
+    display:flex;
+
+    min-height:100vh;
+}
+
+
+
+.sidebar{
+
+    width:340px;
+
+    flex-shrink:0;
+}
+
+
+
+.main-content{
+
+    flex:1;
+    padding:40px;
+    background:#f7f8fc;
+}
+
+
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:40px;
+}
+
+
+
+.page-header h1{
+
+    font-size:42px;
+
+    color:#0F172B;
+}

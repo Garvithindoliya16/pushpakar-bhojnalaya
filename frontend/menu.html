@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Pushpakar Bhojnalaya Menu
+    </title>
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="menu.css"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <img
+                src="images/logo.png"
+                alt=""
+            >
+
+        </div>
+
+        <div class="hamburger" id="hamburger">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="menu.html">
+                    Menu
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#contact">
+                    Contact
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="cart.html"
+                    class="cart-link"
+                >
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Cart
+
+                    <span id="cartCount">
+
+                        0
+
+                    </span>
+
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- MENU PAGE -->
+    <section class="menu-page">
+
+
+        <!-- HEADING -->
+
+        <div class="menu-page-heading">
+
+            <h1>
+
+                Our <span>Delicious</span> Menu
+
+            </h1>
+
+            <p>
+
+                Fresh • Hygienic • Delicious
+
+            </p>
+
+        </div>
+
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search delicious food..."
+                onkeyup="searchMenu()"
+            >
+
+        </div>
+
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filter-buttons">
+            <button onclick="filterMenu('All')">
+                All
+            </button>
+
+            <button onclick="filterMenu('Special Dishes')">
+                Special Dishes
+            </button>
+
+            <button onclick="filterMenu('Punjabi Zaika')">
+                Punjabi Zaika
+            </button>
+
+            <button onclick="filterMenu('Dal')">
+                Dal
+            </button>
+
+            <button onclick="filterMenu('Rajasthani Special')">
+                Rajasthani Special
+            </button>
+
+            <button onclick="filterMenu('Veg')">
+                Veg
+            </button>
+
+            <button onclick="filterMenu('Rice')">
+                Rice
+            </button>
+
+            <button onclick="filterMenu('Curd / Raita')">
+                Curd / Raita
+            </button>
+            <button onclick="filterMenu('Roti / Naan / Paratha')">
+                Roti / Naan / Paratha
+            </button>
+        </div>
+
+
+
+        <!-- MENU CONTAINER -->
+
+        <div
+            class="menu-container"
+            id="menuContainer"
+        >
+
+
+            <!-- SKELETON LOADING -->
+
+            <div class="skeleton-card"></div>
+
+            <div class="skeleton-card"></div>
+
+            <div class="skeleton-card"></div>
+
+            <div class="skeleton-card"></div>
+
+            <div class="skeleton-card"></div>
+
+            <div class="skeleton-card"></div>
+
+
+        </div>
+
+
+    </section>
+
+    <!-- FOOD MODAL -->
+    <div
+        class="food-modal"
+        id="foodModal"
+    >
+
+        <div class="modal-content">
+
+
+            <!-- CLOSE -->
+
+            <span
+                class="close-modal"
+                onclick="closeModal()"
+            >
+
+                &times;
+
+            </span>
+
+
+
+            <!-- IMAGE -->
+
+            <img
+                id="modalImage"
+            >
+
+
+
+            <!-- DETAILS -->
+
+            <div class="modal-details">
+
+
+                <h1 id="modalName">
+
+                </h1>
+
+
+                <p id="modalDescription">
+
+                </p>
+
+
+                <h2 id="modalPrice">
+
+                </h2>
+
+
+
+                <!-- QUANTITY -->
+
+                <div class="modal-quantity">
+
+                    <button onclick="decreaseModalQty()">
+
+                        -
+
+                    </button>
+
+
+                    <span id="modalQty">
+
+                        1
+
+                    </span>
+
+
+                    <button onclick="increaseModalQty()">
+
+                        +
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    class="modal-cart-btn"
+                    onclick="addModalToCart()"
+                >
+
+                    Add To Cart
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    
+    
+    </div>
+    <div
+        id="toast"
+        class="toast"
+    >
+
+    </div>
+
+
+    <!-- JS -->
+    <script src="menu.js"></script>
+
+</body>
+
+</html>

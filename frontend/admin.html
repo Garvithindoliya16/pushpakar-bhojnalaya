@@ -1,0 +1,210 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Dashboard</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="admin.css" />
+
+    <!-- FONT AWESOME -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ADMIN PAGE -->
+
+    <section class="admin-page">
+      <!-- SIDEBAR -->
+
+      <div class="admin-sidebar">
+        <!-- LOGO -->
+
+        <div class="sidebar-logo">
+          <img src="images/logo.png" alt="" />
+
+          <h2>Pushpakar Bhojnalaya</h2>
+        </div>
+
+        <!-- MENU -->
+
+        <ul class="sidebar-menu">
+          <li class="active-sidebar">
+            <i class="fa-solid fa-bowl-food"></i>
+
+            Add Dish
+          </li>
+
+          <li>
+            <i class="fa-solid fa-utensils"></i>
+
+            Manage Dishes
+          </li>
+
+          <li>
+            <i class="fa-solid fa-layer-group"></i>
+
+            Categories
+          </li>
+
+          <li>
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <a href="orders.html">Orders</a>
+          </li>
+        </ul>
+
+        <!-- LOGOUT -->
+
+        <button class="admin-logout-btn" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+
+          Logout
+        </button>
+
+        <!-- PROFILE -->
+
+        <div class="admin-profile">
+          <img src="images/logo.png" alt="" />
+
+          <div>
+            <h3>Admin</h3>
+
+            <p>admin@gmail.com</p>
+
+            <span> ● Online </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN -->
+
+      <div class="admin-main-content">
+        <!-- TOPBAR -->
+
+        <div class="admin-topbar">
+          <div>
+            <h1>Menu Dashboard</h1>
+
+            <div class="title-line"></div>
+          </div>
+        </div>
+
+        <!-- ADD DISH -->
+
+        <div class="admin-card">
+          <div class="card-title">
+            <i class="fa-solid fa-circle-plus"></i>
+
+            <h2>Add New Dish</h2>
+          </div>
+
+          <!-- FORM -->
+
+          <form class="admin-form" id="menuForm">
+            <div class="form-grid">
+              <!-- NAME -->
+
+              <div class="form-group">
+                <label> Dish Name </label>
+
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter dish name"
+                  required
+                />
+              </div>
+
+              <!-- DESCRIPTION -->
+
+              <div class="form-group">
+                <label> Description </label>
+
+                <input
+                  type="text"
+                  id="description"
+                  placeholder="Enter description"
+                  required
+                />
+              </div>
+
+              <!-- PRICE -->
+
+              <div class="form-group">
+                <label> Price </label>
+
+                <input
+                  type="number"
+                  id="price"
+                  placeholder="Enter price"
+                  required
+                />
+              </div>
+
+              <!-- CATEGORY -->
+
+              <div class="form-group">
+                <label> Category </label>
+
+                <select id="category">
+                  <option>Special Dishes</option>
+                  <option>Punjabi Zaika</option>
+                  <option>Dal</option>
+                  <option>Rajasthani Special</option>
+                  <option>Veg</option>
+                  <option>Rice</option>
+                  <option>Curd / Raita</option>
+                  <option>Roti / Naan / Paratha</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- IMAGE -->
+
+            <div class="form-group">
+              <label> Dish Image </label>
+
+              <input type="file" id="image" required />
+            </div>
+
+            <!-- BUTTON -->
+
+            <button type="submit" class="add-dish-btn">
+              <i class="fa-solid fa-bell-concierge"></i>
+
+              Add Dish
+            </button>
+          </form>
+        </div>
+
+        <!-- ALL DISHES -->
+
+        <div class="admin-card">
+          <div class="card-title">
+            <i class="fa-solid fa-utensils"></i>
+
+            <h2>All Dishes</h2>
+          </div>
+
+          <!-- MENU ITEMS -->
+
+          <div id="adminMenuContainer" class="admin-menu-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JS -->
+
+    <script src="admin.js"></script>
+  </body>
+</html>
